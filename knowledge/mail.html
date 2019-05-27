@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta description="viewport" content="width=device-width initial-scale=1.0">
+        <title>PHP Mailer</title>
+        <style>
+            body{
+                background-color: skyblue;
+            }
+            .wrapper{
+                width: 400px;
+                padding: 30px;
+                background-color: white;
+                margin: 0 auto;
+            }
+            .wrapper h2{
+                text-transform: uppercase;
+            }
+            .wrapper input[type='email'],
+            .wrapper input[type='text'],
+            .wrapper input[type='submit'],
+            textarea{
+                width: 100%;
+                margin-bottom: 15px;
+                padding: 5px;
+            }
+            
+        </style>
+        <!--<?php 
+if(isset($_POST['sendMail'])){
+    //ini_set('SMTP', '192.2.107.124');
+    //ini_set('sendmail_from', 'mustardseed19@gmail.com');
+if(mail($_POST['email'], $_POST['subject'], $_POST['message'])){
+    
+    echo "Thank you for contacting us";
+}else{
+    echo "Failed";
+}
+}
+
+?>-->
+    </head>
+    <body>
+        <div class="wrapper">
+            <h2>Email Sender</h2>
+            <br>
+            <form method="post" action="send_mail.php">
+                <label for="email">To Email:</label>
+            <input type="email" name="email">
+             <label for="subject">Subject:</label>
+            <input type="text" name="subject">
+             <label for="message">Message:</label>
+            <textarea name="message" cols="30" rows="10"></textarea>
+            <input type="submit" name="sendMail" value="Send Email">
+            </form>
+            
+        </div>
+    </body>
+</html>
